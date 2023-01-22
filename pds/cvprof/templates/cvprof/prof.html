@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.w3schools.com/w3css/tryw3css_templates_cv.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Django App!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="{% static 'cvprof/src/w3.css' %}">
+<link rel="stylesheet" href="{% static 'cvprof/src/css.css' %}">
+<link rel="stylesheet" href="{% static 'cvprof/src/f/css/font-awesome.min.css' %}">
+
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+    <div class="w3-row">      
+        <div class="w3-container">
+            <div class="w3-container  w3-card w3-white w3-margin-bottom">
+              <div class="w3-bar w3-padding-small">
+                <a href="{% url 'cvprof:profiles' %}" class="w3-bar-item w3-button w3-text-teal"> <i class="fa fa-address-book fa-fw w3-margin-left w3-large " aria-hidden="true"></i>Lists Of Names</a>
+                <a href="http://127.0.0.1:8000/admin/cvprof/cvmodel/add/" class="w3-bar-item w3-button w3-text-teal">Add New Cv Model</a>
+                <a href="http://127.0.0.1:8000/admin/" class="w3-bar-item w3-button w3-text-teal">Admin Page</a>
+              </div>
+                
+            </div>     
+        </div>
+
+        <div class="w3-container">
+            <div class="w3-container  w3-card w3-white w3-margin-bottom">
+               <h2>List of Profile ( )</h2>
+              
+               <ul  class="w3-ul">
+                {% for itm in records %}
+                    <li class="w3-bar">
+                      <span onclick="this.parentElement.style.display='none'"
+                      class="w3-bar-item w3-button w3-xlarge w3-right">&times;</span>
+                      
+                      <img src="{% static 'cvprof/src/img/lisa.jpeg' %}" class="w3-bar-item w3-circle" style="width:85px">
+                      <div class="w3-bar-item">
+                        <span class="w3-large">
+                          <a href="{% url 'cvprof:index' itm.id %}" class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-teal">{{ itm.fullname }}</a>
+                        </span>                        
+                      </div>
+                  </li>
+                {% endfor %}
+                </ul>
+                
+
+            </div>     
+        </div>
+
+    </div>
+
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+
+</body>
+
+</html>

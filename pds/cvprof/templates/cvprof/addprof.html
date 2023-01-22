@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://www.w3schools.com/w3css/tryw3css_templates_cv.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Django App!</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/cvprof/src/w3.css">
+<link rel="stylesheet" href="/static/cvprof/css.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+    <div class="w3-row">      
+        <div class="w3-container">
+            <div class="w3-container  w3-card w3-white w3-margin-bottom">
+                <div class="w3-bar w3-padding-small">
+                  <a href="/prof/" class="w3-bar-item w3-button w3-text-indigo"> <i class="fa fa-address-book fa-fw w3-margin-left w3-large " aria-hidden="true"></i>Default Profile</a>
+                  <a href="/prof/addprof" class="w3-bar-item w3-button w3-text-indigo">New CV</a>
+                  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                </div>
+                
+            </div>     
+        </div>
+
+        <div class="w3-container">
+            <div class="w3-container  w3-card w3-white">
+               <h2> ADD CV Profile  </h2>
+             
+               <form action="/prof/addprof" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="s3ghq41M7B0eIBdA5GRiU4VKIURnijSsVxzUEqpLxQOoLr6V0PQtyBMcNfc6Zxvf">
+                    <tr>
+    <th><label for="id_fullname">Fullname:</label></th>
+    <td>
+      
+      <input type="text" name="fullname" maxlength="255" required id="id_fullname">
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_address">Address:</label></th>
+    <td>
+      
+      <input type="text" name="address" maxlength="500" required id="id_address">
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_email">Email:</label></th>
+    <td>
+      
+      <input type="email" name="email" required id="id_email">
+      
+      
+        
+      
+    </td>
+  </tr>  
+                    <button type="submit">Submit</button>
+               </form>
+                
+                <p>&nbsp;</p>
+                
+            </div>     
+        </div>
+
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-indigo w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+
+</body>
+
+</html>
